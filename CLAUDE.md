@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-A personal collection of Claude Code plugins, published as a marketplace package (`sharon-claude`). Plugins provide skills (specialized capabilities) and output styles for use within Claude Code sessions.
+A personal collection of Claude Code plugins, published as a marketplace package (`haley-claude`). Plugins provide skills (specialized capabilities) and output styles for use within Claude Code sessions.
 
 ## Repository Layout
 
