@@ -1,0 +1,25 @@
+{
+	"name": "sharon-claude",
+	"version": "0.0.1",
+	"description": "Personal configuration for Claude Code",
+	"owner": {
+		"name": "Ryan Haley",
+		"url": "https://github.com/haleyrc"
+	},
+	"plugins": [
+		{
+			"name": "go",
+			"description": "Tools for working with Go code",
+			"version": "0.0.1",
+			"source": "./plugins/go",
+			"strict": false
+		},
+		{
+			"name": "output-styles",
+			"description": "Output styles for customizing Claude's responses",
+			"version": "0.0.1",
+			"source": "./plugins/output-styles",
+			"strict": false
+		}
+	]
+}
