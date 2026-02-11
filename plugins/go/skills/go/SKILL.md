@@ -4,13 +4,9 @@ description: Write high-quality Go code that follows internal and industry best-
 user-invocable: false
 ---
 
-# Go
-
 This skill defines development patterns, conventions, and preferences for writing, reviewing, and modifying Go code.
 
-## Commands
-
-### Getting documentation
+## Getting documentation
 
 Use the `go doc` CLI for looking up documentation.
 
@@ -35,6 +31,38 @@ For local code (code in the current project repository), you can either include 
 # Assuming we are in the `example` project:
 go doc github.com/haleyrc/example/lib/log
 go doc ./example/lib/log
+```
+
+## Test Coverage
+
+Before reading files to determine testing gaps, use `go test --cover` to verify test coverage.
+
+**For a quick summary:**
+
+```bash
+go test --cover ./...             # Generate coverage for every package in the project
+go test --cover ./example/lib/log # Generate coverage numbers for a specific package
+go test --cover ./example/lib/... # Generate coverage numbers for a package and all its sub-packages
+```
+
+This generates lines indicating the test status, package name, test run time, and percentage of statements covered. For example:
+
+```bash
+ok      github.com/example/lib/assert   1.146s  coverage: 83.1% of statements
+```
+
+**For detailed coverage information:**
+
+```bash
+go test --coverprofile=c.out <package selector> # Generate a coverage profile
+go tool cover --func=c.out                      # Output per-function coverage
+rm c.out                                        # Clean up once the profile is no longer required
+```
+
+This will produce lines indicating the path to the file, the line number of the function-under-test, the name of the function, and the coverage percentage. For example:
+
+```bash
+github.com/haleyrc/lib/assert/assert.go:20:             ContentType             100.0%
 ```
 
 ## Additional Documentation
