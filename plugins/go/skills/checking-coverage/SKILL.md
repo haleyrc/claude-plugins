@@ -2,7 +2,7 @@
 name: checking-coverage
 description: Guidance for checking test coverage in Go. Use when the user asks about test coverage, untested code, testing gaps, or which code needs tests or when test coverage is implicitly required for a task, even if coverage is not mentioned explicitly.
 user-invocable: false
-allowed-tools: Bash(go test *)
+allowed-tools: Bash(go test *), Bash(go tool *)
 ---
 
 Before reading files to determine testing gaps, use `go test --cover` to verify test coverage.
