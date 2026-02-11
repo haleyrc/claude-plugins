@@ -1,0 +1,19 @@
+{
+	"hooks": {
+		"PostToolUse": [
+			{
+				"matcher": "Edit|Write",
+				"hooks": [
+					{
+						"type": "command",
+						"command": "templ fmt ."
+					},
+					{
+						"type": "command",
+						"command": "templ generate ./..."
+					}
+				]
+			}
+		]
+	}
+}

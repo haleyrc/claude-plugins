@@ -20,6 +20,13 @@
 			"version": "0.0.1",
 			"source": "./plugins/output-styles",
 			"strict": false
+		},
+		{
+			"name": "templ",
+			"description": "Tools for working with Templ templates",
+			"version": "0.0.1",
+			"source": "./plugins/templ",
+			"strict": false
 		}
 	]
 }
